@@ -4,9 +4,12 @@ export default function DashBoardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-[250px_1fr]">
-      <div>Side panel</div>
-      <div>{children}</div>
+    <div className="grid grid-cols-[250px_1fr] h-screen">
+      <div className="bg-muted overflow-auto p-4">Side panel</div>
+      <div className="overflow-auto py-2 px-4">
+        <h1 className="pb-4">Welcome back, bong</h1>
+        {children}
+      </div>
     </div>
   );
 }
